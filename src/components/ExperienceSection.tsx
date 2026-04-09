@@ -17,7 +17,8 @@ const ExperienceSection = () => {
       organization: 'Mind Quest IIIT Kottayam',
       period: '2026 - Present',
       description:
-        'IIIT Kottayam''s initiative, promotes the mental health of students, faculty, and staff by evolving a safe and supportive campus environment. It offers workshops, mindfulness sessions, and awareness campaigns to reduce stress and ensuring the well-being of the entire IIIT Kottayam community: ['Mental Health', 'Well-Being', 'Community Session'],
+        'IIIT Kottayam''s initiative, promotes the mental health of students, faculty, and staff by evolving a safe and supportive campus environment. It offers workshops, mindfulness sessions, and awareness campaigns to reduce stress and ensuring the well-being of the entire IIIT Kottayam community.',
+      highlights: ['Mental Health', 'Well-Being', 'Community Session'],
     },
   ];
 
