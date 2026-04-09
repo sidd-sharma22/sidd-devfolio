@@ -13,12 +13,11 @@ const ExperienceSection = () => {
     },
     {
       icon: Users,
-      role: 'Member',
-      organization: 'GDG IIIT Kottayam',
-      period: '2024 - Present',
+      role: 'Community Volunteer',
+      organization: 'Mind Quest IIIT Kottayam',
+      period: '2026 - Present',
       description:
-        'Active participant in Google Developer Group activities. Engaged in workshops on Android, Flutter, and Cloud technologies. Contributing to the developer community on campus.',
-      highlights: ['Android Dev', 'Cloud Computing', 'Community Building'],
+        'IIIT Kottayam''s initiative, promotes the mental health of students, faculty, and staff by evolving a safe and supportive campus environment. It offers workshops, mindfulness sessions, and awareness campaigns to reduce stress and ensuring the well-being of the entire IIIT Kottayam community: ['Mental Health', 'Well-Being', 'Community Session'],
     },
   ];
 
