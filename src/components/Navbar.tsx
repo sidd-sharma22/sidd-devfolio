@@ -76,8 +76,8 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="/sidd-resume.pdf"
-              download="Siddharth_Sharma_Resume.pdf"
+              href="/Sidd_Resume.pdf" 
+              download="Sidd_Resume.pdf"
               className="px-4 py-3 rounded-lg bg-primary text-primary-foreground text-center font-medium mt-2"
             >
               Resume
