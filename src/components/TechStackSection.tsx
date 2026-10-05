@@ -2,19 +2,23 @@ const TechStackSection = () => {
   const techCategories = [
     {
       title: 'Languages',
-      items: ['C/C++', 'Java', 'Python', 'HTML/CSS', 'JavaScript'],
+      items: ['C/C++', 'Java', 'Python', 'HTML/CSS', 'JavaScript', 'TypeScript', 'SQL'],
     },
     {
-      title: 'Frameworks & Libraries',
-      items: ['React', 'Node.js', 'Express', 'Tailwind CSS', 'Streamlit'],
+      title: 'AI/ML',
+      items: ['Machine Learning', 'Neural Network', 'TensorFlow/Keras', 'scikit-learn', 'TinyML'],
     },
     {
-      title: 'Tools & Platforms',
-      items: ['Git', 'GitHub', 'VS Code', 'Figma', 'Google Cloud'],
+      title: 'Data Science',
+      items: ['NumPy', 'Pandas', 'EDA', 'Data Preprocessing', 'Feature Engineering'],
     },
     {
-      title: 'Core Concepts',
-      items: ['DSA', 'OOPs', 'Web Dev', 'GenAI', 'MySQL'],
+      title: 'Web/Backend',
+      items: ['Django', 'FastAPI', 'REST APIs', 'React.js', 'Next.js', 'HTML5', 'CSS3', 'Tailwind CSS'],
+    },
+    {
+      title: 'Databases/Tools',
+      items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Git', 'GitHub', 'Linux', 'Postman', 'Vercel'],
     },
   ];
 
@@ -70,9 +74,8 @@ const TechStackSection = () => {
               <span className="text-primary">const</span>{' '}
               <span className="text-foreground">developer</span> = {'{'}
               {'\n'}  name: <span className="text-primary">"Siddharth Sharma"</span>,
-              {'\n'}  cgpa: <span className="text-primary">7.68</span>,
-              {'\n'}  title: <span className="text-primary">"Full-Stack Student Developer"</span>,
-              {'\n'}  skills: [<span className="text-primary">"React"</span>, <span className="text-primary">"Python"</span>, <span className="text-primary">"GenAI"</span>, <span className="text-primary">"DSA"</span>, <span className="text-primary">"OOPs"</span>]
+              {'\n'}  cgpa: <span className="text-primary">7.69</span>,
+              {'\n'}  title: <span className="text-primary">"AI/ML Engineer"</span>,
               {'\n'}  available: <span className="text-primary">True</span>
               {'\n'}{'}'};
             </code>
