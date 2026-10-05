@@ -4,13 +4,13 @@ const AboutSection = () => {
   const highlights = [
     {
       icon: Code,
-      title: 'Engineer',
-      description: 'Strong foundation in DSA, OOPs, and full-stack development',
+      title: 'AI/ML Engineer and Researcher',
+      description: 'Strong foundation in AI/ML, having one accepted paper at an IEEE Conference.',
     },
     {
       icon: Camera,
       title: 'Creative Lead',
-      description: 'Sub-Lead at Chitrachaya Photography Club, IIIT Kottayam',
+      description: 'Lead at Chitrachaya Photography Club, IIIT Kottayam',
     },
     {
       icon: Globe,
@@ -49,21 +49,19 @@ const AboutSection = () => {
             
             <p className="text-lg text-muted-foreground leading-relaxed">
               Beyond code, I lead the creative vision as{' '}
-              <span className="text-primary font-medium">Sub-Lead of Chitrachaya Photography Club</span>, 
+              <span className="text-primary font-medium">Lead of Chitrachaya - Photography Club</span>, 
               where I manage teams, mentor budding photographers, and capture campus life through my lens. 
-              As a member of <span className="text-foreground font-medium">Google Developer Group IIIT Kottayam</span>, 
-              I stay at the forefront of Android, Flutter, and Cloud technologies.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
               Currently diving deep into{' '}
-              <span className="text-primary font-medium">Generative AI</span> and its applications, 
-              while strengthening my foundations in full-stack development. When I'm not coding, 
-              you'll find me exploring photography, learning German, or preparing for my next skill.
+              <span className="text-primary font-medium">Machine Learning</span>, Neural Network, IoT Security and its applications, 
+              while strengthening my foundations in researching. When I'm not coding, 
+              you'll find me exploring photography, learning German, or may be writing a new paper.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-4">
-              {['C/C++', 'Python', 'JavaScript', 'React', 'Node.js', 'GenAI'].map((skill) => (
+              {['C/C++', 'Java', 'Python', 'JavaScript', 'React', 'Node.js', 'AI/ML'].map((skill) => (
                 <span
                   key={skill}
                   className="px-3 py-1 rounded-lg text-sm font-mono bg-primary/10 text-primary border border-primary/20"
