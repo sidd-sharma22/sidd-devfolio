@@ -1,24 +1,36 @@
-import { ExternalLink, Github, Briefcase, FileArchive, Terminal } from 'lucide-react';
+import { ExternalLink, Github, Briefcase, FileArchive, Terminal, Laptop } from 'lucide-react';
 
 const ProjectsSection = () => {
   const projects = [
     {
       title: 'Khatu Shyam Trading Co.',
       description:
-        'A B2B ecommerce platform for a wholesale distributor in Gwalior. It organizes product lines, presents brand catalogs, and supports direct business contact through WhatsApp.',
-      tech: ['React', 'Next.js', 'Tailwind CSS', 'Vercel'],
+        'A comprehensive B2B ecommerce platform for a wholesale distributor in Gwalior. Features dynamic product search, filtering, trade pricing, catalog browsing, and direct WhatsApp order inquiries.',
+      tech: ['TypeScript', 'Next.js', 'Tailwind CSS', 'PostgreSQL', 'Vercel'],
       icon: Briefcase,
       links: {
         live: 'https://khatu-shyam-trading-co.vercel.app',
         github: '#',
       },
-      note: 'The current public deployment only includes a portfolio-facing view.',
+      note: 'The public deployment showcases the catalog and client-facing trade portal.',
+    },
+    {
+      title: 'StudyHub',
+      description:
+        'A full-stack productivity web application featuring study-session tracking and performance analytics. Built with high-throughput REST APIs and end-to-end relational data integration.',
+      tech: ['FastAPI', 'Python', 'PostgreSQL', 'HTML5/CSS3', 'REST APIs'],
+      icon: Laptop,
+      links: {
+        live: null,
+        github: 'https://github.com/sidd-sharma22',
+      },
+      note: 'Engineered during full-stack developer internship at Decodelabs.',
     },
     {
       title: 'File Compression Tool',
       description:
-        'A command-line utility for lossless text compression and decompression using Huffman coding. Built to improve compression efficiency on text-heavy datasets.',
-      tech: ['C++', 'DSA', 'Huffman Coding'],
+        'A high-performance command-line utility for lossless text compression and decompression using Huffman coding and greedy algorithms. Achieved up to 40% storage reduction on text datasets without data loss.',
+      tech: ['C++', 'DSA', 'Huffman Coding', 'Greedy Algorithms'],
       icon: FileArchive,
       links: {
         live: null,
@@ -28,21 +40,21 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section" aria-labelledby="projects-title">
       <div className="site-container">
         <header className="section-header">
-          <p className="section-kicker">Featured work</p>
-          <h2>
-            My <span className="text-gradient">Projects</span>
+          <p className="section-kicker">Featured Work</p>
+          <h2 id="projects-title">
+            Featured <span className="text-gradient">Projects</span>
           </h2>
-          <p>Selected builds that reflect my technical strengths and interests.</p>
+          <p>Production web applications, full-stack systems, and algorithmic software.</p>
         </header>
 
         <div className="project-grid">
           {projects.map((project) => (
             <article key={project.title} className="glass-panel project-card">
               <div className="project-card__icon" aria-hidden="true">
-                <project.icon size={44} />
+                <project.icon size={26} />
               </div>
 
               <div className="project-card__content">
@@ -59,7 +71,7 @@ const ProjectsSection = () => {
                 </div>
 
                 <div className="project-card__links">
-                  {project.links.github ? (
+                  {project.links.github && project.links.github !== '#' ? (
                     <a href={project.links.github} className="text-link" target="_blank" rel="noopener noreferrer">
                       <Github size={16} aria-hidden="true" />
                       Code
@@ -73,10 +85,10 @@ const ProjectsSection = () => {
                     </a>
                   ) : null}
 
-                  {!project.links.github && !project.links.live && (
+                  {!project.links.live && (!project.links.github || project.links.github === '#') && (
                     <span className="project-card__link-muted">
                       <Terminal size={16} aria-hidden="true" />
-                      Local / CLI only
+                      Local / CLI build
                     </span>
                   )}
                 </div>
@@ -86,9 +98,14 @@ const ProjectsSection = () => {
         </div>
 
         <div className="section-actions">
-          <a href="https://github.com/sidd-sharma22" target="_blank" rel="noopener noreferrer" className="button button--secondary">
+          <a
+            href="https://github.com/sidd-sharma22"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button button--secondary"
+          >
             <Github size={18} aria-hidden="true" />
-            View More on GitHub
+            Explore More on GitHub
           </a>
         </div>
       </div>

@@ -1,31 +1,40 @@
-import { Camera, Users, Award, BookOpen } from 'lucide-react';
+import { Code2, Camera, Users, Award, BookOpen, Sparkles } from 'lucide-react';
 
 const ExperienceSection = () => {
   const experiences = [
     {
+      icon: Code2,
+      role: 'Full Stack Developer Intern',
+      organization: 'Decodelabs',
+      period: 'Remote | May 2026 – Jun 2026',
+      description:
+        'Built StudyHub, a full-stack productivity application featuring study-session tracking and performance analytics. Developed high-throughput REST APIs using FastAPI/Python, integrated PostgreSQL end-to-end, and engineered the responsive frontend using HTML5/CSS3.',
+      highlights: ['FastAPI', 'Python', 'PostgreSQL', 'HTML5/CSS3', 'REST APIs'],
+    },
+    {
       icon: Camera,
       role: 'Lead',
-      organization: 'Chitrachaya | Photography Club',
-      period: '2024 - Present',
+      organization: 'Chitrachaya | Photography Club, IIIT Kottayam',
+      period: '2024 – Present',
       description:
-        'Lead creative direction for the official photography club, coordinate event coverage, mentor junior members, and curate content for campus publications.',
-      highlights: ['Team management', 'Leadership', 'Creative direction'],
+        'Lead creative direction for the official photography club. Led 15+ active members across 10+ major institute events, mentored 8 junior recruits, and curated visual storytelling for campus publications.',
+      highlights: ['Team Leadership', 'Mentorship', 'Creative Direction', 'Event Media'],
     },
     {
       icon: Users,
       role: 'Community Volunteer',
-      organization: 'Mind Quest IIIT Kottayam',
-      period: '2026 - Present',
+      organization: 'Mind Quest | IIIT Kottayam',
+      period: '2026 – Present',
       description:
-        'Support IIIT Kottayam’s mental health initiative through workshops, mindfulness sessions, and awareness activities that help foster a safer campus environment.',
-      highlights: ['Mental health', 'Community support', 'Well-being sessions'],
+        'Support IIIT Kottayam’s student mental health and wellness initiative through peer workshops, mindfulness sessions, and awareness drives fostering an inclusive campus community.',
+      highlights: ['Peer Support', 'Community Well-Being', 'Workshop Facilitation'],
     },
   ];
 
   const certifications = [
     {
-      title: 'Google Gen-AI Academy',
-      issuer: 'Google',
+      title: 'Google Cloud Gen AI Academy',
+      issuer: 'Google Cloud',
       icon: Award,
     },
     {
@@ -36,19 +45,19 @@ const ExperienceSection = () => {
     {
       title: 'Prompt Design in Vertex AI',
       issuer: 'Google Cloud',
-      icon: Award,
+      icon: Sparkles,
     },
   ];
 
   return (
-    <section id="experience" className="section section--soft-bg">
+    <section id="experience" className="section section--soft-bg" aria-labelledby="experience-title">
       <div className="site-container">
         <header className="section-header">
-          <p className="section-kicker">Experience</p>
-          <h2>
-            Leadership & <span className="text-gradient">Involvement</span>
+          <p className="section-kicker">Experience & Leadership</p>
+          <h2 id="experience-title">
+            Industry & <span className="text-gradient">Leadership</span>
           </h2>
-          <p>Ways I&apos;ve grown by contributing to teams and communities.</p>
+          <p>Practical engineering roles, student leadership, and community impact.</p>
         </header>
 
         <div className="experience-grid">
@@ -80,9 +89,9 @@ const ExperienceSection = () => {
 
         <div className="section-header section-header--tight">
           <h3>
-            Certifications & <span className="text-gradient">Courses</span>
+            Certifications & <span className="text-gradient">Specializations</span>
           </h3>
-          <p>Continuous learning through focused programs.</p>
+          <p>Continuous learning and credentialing in generative AI, cloud, and robotics.</p>
         </div>
 
         <div className="cert-grid">
