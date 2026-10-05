@@ -56,7 +56,7 @@ const HeroSection = () => {
                 Check My Work
               </a>
               <a
-                href="/Sidd_Resume.pdf" 
+                href="/Sidd_Resume_AI.pdf" 
                 download="Sidd_Resume.pdf"
                 className="px-8 py-4 rounded-xl glass-hover font-semibold flex items-center justify-center gap-2"
               >
@@ -99,7 +99,7 @@ const HeroSection = () => {
               {/* Image container */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/30 glow-border">
                 <img 
-                  src="/profile-pic.jpg" 
+                  src="/profile-pic-1.jpg" 
                   alt="Siddharth Sharma" 
                   className="w-full h-full object-cover" 
                 />
