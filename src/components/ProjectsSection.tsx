@@ -5,23 +5,21 @@ const ProjectsSection = () => {
     {
       title: 'Khatu Shyam Trading Co.',
       description:
-        'A B2B e-commerce platform designed for a Gwalior-based wholesale distributor. Digitized their inventory of Sentini Flopipes, Paras Tanks, and Johnson Sanitary ware. Features include brand showcase, product categorization (Agri/SWR pipes), and direct WhatsApp business integration.',
+        'A B2B ecommerce platform for a wholesale distributor in Gwalior. It organizes product lines, presents brand catalogs, and supports direct business contact through WhatsApp.',
       tech: ['React', 'Next.js', 'Tailwind CSS', 'Vercel'],
       icon: Briefcase,
-      gradient: 'from-blue-500/20 to-emerald-500/20',
       links: {
         live: 'https://khatu-shyam-trading-co.vercel.app',
-        github: '#', // Placeholder if you add it later
+        github: '#',
       },
-      note: 'Currently live link only shows their portfolio page.',
+      note: 'The current public deployment only includes a portfolio-facing view.',
     },
     {
       title: 'File Compression Tool',
       description:
-        'A high-performance command-line tool built to compress and decompress text files without data loss. Implemented Huffman Coding algorithm to analyze character frequency and generate optimal binary trees, achieving up to 40% reduction in file size for text-heavy datasets.',
+        'A command-line utility for lossless text compression and decompression using Huffman coding. Built to improve compression efficiency on text-heavy datasets.',
       tech: ['C++', 'DSA', 'Huffman Coding'],
       icon: FileArchive,
-      gradient: 'from-slate-500/20 to-green-500/20',
       links: {
         live: null,
         github: null,
@@ -30,108 +28,67 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 relative">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-primary font-mono text-sm mb-2">// Featured Work</p>
-          <h2 className="section-heading">
-            My <span className="gradient-text">Projects</span>
+    <section id="projects" className="section">
+      <div className="site-container">
+        <header className="section-header">
+          <p className="section-kicker">Featured work</p>
+          <h2>
+            My <span className="text-gradient">Projects</span>
           </h2>
-          <p className="section-subheading max-w-2xl mx-auto">
-            Selected projects that showcase my skills and passion
-          </p>
-        </div>
+          <p>Selected builds that reflect my technical strengths and interests.</p>
+        </header>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {projects.map((project, index) => (
-            <div
-              key={project.title}
-              className="group glass rounded-2xl overflow-hidden card-hover-glow"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              {/* Project Header */}
-              <div
-                className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}
-              >
-                <div className="absolute inset-0 bg-background/50" />
-                <project.icon
-                  size={64}
-                  className="text-primary relative z-10 group-hover:scale-110 transition-transform duration-500"
-                />
-                
-                {/* Floating particles effect */}
-                <div className="absolute top-4 left-4 w-2 h-2 bg-primary/50 rounded-full animate-float" />
-                <div className="absolute bottom-8 right-8 w-3 h-3 bg-primary/30 rounded-full animate-float animation-delay-200" />
-                <div className="absolute top-12 right-12 w-2 h-2 bg-primary/40 rounded-full animate-float animation-delay-400" />
+        <div className="project-grid">
+          {projects.map((project) => (
+            <article key={project.title} className="glass-panel project-card">
+              <div className="project-card__icon" aria-hidden="true">
+                <project.icon size={44} />
               </div>
 
-              {/* Project Content */}
-              <div className="p-6">
-                <h3 className="font-mono font-bold text-xl mb-3 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                  {project.description}
-                </p>
+              <div className="project-card__content">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                {project.note ? <p className="project-card__note">{project.note}</p> : null}
 
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="chip-list">
                   {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-1 text-xs font-mono rounded bg-secondary text-secondary-foreground"
-                    >
+                    <span key={tech} className="chip">
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                {/* Links */}
-                <div className="flex gap-4">
+                <div className="project-card__links">
                   {project.links.github ? (
-                    <a
-                      href={project.links.github}
-                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <Github size={16} />
+                    <a href={project.links.github} className="text-link" target="_blank" rel="noopener noreferrer">
+                      <Github size={16} aria-hidden="true" />
                       Code
                     </a>
                   ) : null}
 
                   {project.links.live ? (
-                    <a
-                      href={project.links.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <ExternalLink size={16} />
+                    <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="text-link">
+                      <ExternalLink size={16} aria-hidden="true" />
                       Live Demo
                     </a>
                   ) : null}
 
-                  {/* Fallback for local/CLI projects with no links */}
                   {!project.links.github && !project.links.live && (
-                     <span className="flex items-center gap-2 text-sm text-muted-foreground cursor-not-allowed opacity-75">
-                        <Terminal size={16} />
-                        Local / CLI Only
-                     </span>
+                    <span className="project-card__link-muted">
+                      <Terminal size={16} aria-hidden="true" />
+                      Local / CLI only
+                    </span>
                   )}
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <a
-            href="https://github.com/sidd-sharma22"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass-hover font-medium"
-          >
-            <Github size={20} />
-            View All Projects on GitHub
+        <div className="section-actions">
+          <a href="https://github.com/sidd-sharma22" target="_blank" rel="noopener noreferrer" className="button button--secondary">
+            <Github size={18} aria-hidden="true" />
+            View More on GitHub
           </a>
         </div>
       </div>

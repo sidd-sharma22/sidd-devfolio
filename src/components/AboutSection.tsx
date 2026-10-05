@@ -5,87 +5,71 @@ const AboutSection = () => {
     {
       icon: Code,
       title: 'AI/ML Engineer and Researcher',
-      description: 'Strong foundation in AI/ML, having one accepted paper at an IEEE Conference.',
+      description: 'Focused on applied machine learning, with one accepted IEEE conference paper.',
     },
     {
       icon: Camera,
       title: 'Creative Lead',
-      description: 'Lead at Chitrachaya Photography Club, IIIT Kottayam',
+      description: 'Leads Chitrachaya, the photography club at IIIT Kottayam.',
     },
     {
       icon: Globe,
       title: 'Global Mindset',
-      description: 'Learning German, exploring AI/ML and emerging technologies',
+      description: 'Learning German while exploring emerging AI and web technologies.',
     },
     {
       icon: Trophy,
-      title: 'Communicator',
-      description: 'Background in competitive debating and public speaking',
+      title: 'Strong Communicator',
+      description: 'Experience in competitive debating and public speaking.',
     },
   ];
 
   return (
-    <section id="about" className="py-24 relative">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-primary font-mono text-sm mb-2">// Who am I?</p>
-          <h2 className="section-heading">
-            About <span className="gradient-text">Me</span>
+    <section id="about" className="section">
+      <div className="site-container">
+        <header className="section-header">
+          <p className="section-kicker">About me</p>
+          <h2>
+            About <span className="text-gradient">Me</span>
           </h2>
-          <p className="section-subheading max-w-2xl mx-auto">
-            A blend of analytical thinking and creative expression
-          </p>
-        </div>
+          <p>A blend of analytical thinking and creative work.</p>
+        </header>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Bio Text */}
-          <div className="space-y-6 animate-fade-in">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a <span className="text-foreground font-medium">Computer Science student</span> at 
-              IIIT Kottayam with a passion for building things that live on the internet. 
-              My journey in tech started with curiosity about how things work, and has evolved 
-              into a deep love for crafting elegant digital experiences.
-            </p>
-            
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Beyond code, I lead the creative vision as{' '}
-              <span className="text-primary font-medium">Lead of Chitrachaya - Photography Club</span>, 
-              where I manage teams, mentor budding photographers, and capture campus life through my lens. 
-            </p>
-            
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Currently diving deep into{' '}
-              <span className="text-primary font-medium">Machine Learning</span>, Neural Network, IoT Security and its applications, 
-              while strengthening my foundations in researching. When I'm not coding, 
-              you'll find me exploring photography, learning German, or may be writing a new paper.
+        <div className="about-grid">
+          <div className="about-copy">
+            <p>
+              I&apos;m a Computer Science student at IIIT Kottayam who enjoys building useful products for the web.
+              What started as curiosity became a long-term interest in designing reliable, thoughtful software.
             </p>
 
-            <div className="flex flex-wrap gap-3 pt-4">
+            <p>
+              Outside engineering work, I lead Chitrachaya, our photography club. I coordinate event coverage,
+              mentor new members, and help shape visual storytelling on campus.
+            </p>
+
+            <p>
+              I&apos;m currently focused on machine learning, neural networks, and IoT security, while continuing to
+              strengthen my research fundamentals.
+            </p>
+
+            <div className="chip-list" aria-label="Core skills">
               {['C/C++', 'Java', 'Python', 'JavaScript', 'React', 'Node.js', 'AI/ML'].map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 py-1 rounded-lg text-sm font-mono bg-primary/10 text-primary border border-primary/20"
-                >
+                <span key={skill} className="chip">
                   {skill}
                 </span>
               ))}
             </div>
           </div>
 
-          {/* Highlight Cards */}
-          <div className="grid grid-cols-2 gap-4">
-            {highlights.map((item, index) => (
-              <div
-                key={item.title}
-                className="glass-hover rounded-2xl p-6 card-hover-glow"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <item.icon className="text-primary" size={24} />
+          <div className="about-highlights">
+            {highlights.map((item) => (
+              <article key={item.title} className="glass-panel highlight-card">
+                <div className="highlight-card__icon" aria-hidden="true">
+                  <item.icon size={22} />
                 </div>
-                <h3 className="font-mono font-bold text-lg mb-2">{item.title}</h3>
-                <p className="text-muted-foreground text-sm">{item.description}</p>
-              </div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
             ))}
           </div>
         </div>
