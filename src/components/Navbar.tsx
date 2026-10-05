@@ -44,7 +44,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="/Sidd_Resume.pdf" 
+            href="/Sidd_Resume_AI.pdf" 
             download="Sidd_Resume.pdf"
             className="px-4 py-2 rounded-lg bg-primary/10 text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium"
           >
@@ -76,7 +76,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="/Sidd_Resume.pdf" 
+              href="/Sidd_Resume_AI.pdf" 
               download="Sidd_Resume.pdf"
               className="px-4 py-3 rounded-lg bg-primary text-primary-foreground text-center font-medium mt-2"
             >
