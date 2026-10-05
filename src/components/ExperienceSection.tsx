@@ -4,12 +4,12 @@ const ExperienceSection = () => {
   const experiences = [
     {
       icon: Camera,
-      role: 'Sub-Lead',
-      organization: 'Chitrachaya Photography Club',
+      role: 'Lead',
+      organization: 'Chitrachaya | Photography Club',
       period: '2024 - Present',
       description:
         'Leading creative direction for the official photography club. Managing teams for event coverage, mentoring junior members, and curating visual content for college publications.',
-      highlights: ['Team Management', 'Event Coverage', 'Creative Direction'],
+      highlights: ['Team Management', 'Leadership', 'Creative Direction'],
     },
     {
       icon: Users,
@@ -24,19 +24,9 @@ const ExperienceSection = () => {
 
   const certifications = [
     {
-      title: 'Google Cloud: Cybersecurity Fundamentals',
-      issuer: 'Google Cloud',
-      icon: Award,
-    },
-    {
       title: 'Google Gen-AI Academy',
       issuer: 'Google',
       icon: Award,
-    },
-    {
-      title: 'Full-Stack Developer Certification',
-      issuer: 'freeCodeCamp',
-      icon: BookOpen,
     },
     {
       title: 'Advances in Robotics',
