@@ -21,15 +21,14 @@ const ContactSection = () => {
         </svg>
       ),
       label: 'X (Twitter)',
-      href: 'https://x.com/sidd_sharma22',
+      href: 'https://x.com/sidd_sharma19',
       username: '@sidd_sharma22',
     },
     {
       icon: Instagram,
       label: 'Instagram',
-      href: 'https://instagram.com/osm.views',
-      username: '@osm.views',
-      note: 'Creative Gallery',
+      href: 'https://instagram.com/sidd_sharma19',
+      username: '@sidd_sharma19',
     },
   ];
 
@@ -81,7 +80,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="font-medium">Kottayam, Kerala / Gwalior, MP</p>
+                    <p className="font-medium">Kottayam, Kerala | Gwalior, MP</p>
                   </div>
                 </div>
               </div>
