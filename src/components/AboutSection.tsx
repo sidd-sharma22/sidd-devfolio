@@ -5,7 +5,7 @@ const AboutSection = () => {
     {
       icon: Code,
       title: 'AI/ML Engineer and Researcher',
-      description: 'Focused on applied machine learning, with one accepted IEEE conference paper.',
+      description: 'Focused on applied machine learning, with an accepted ICIIS 2026 research paper.',
     },
     {
       icon: Camera,
