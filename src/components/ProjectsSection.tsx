@@ -5,7 +5,7 @@ const ProjectsSection = () => {
     {
       title: 'Khatu Shyam Trading Co.',
       description:
-        'A B2B digital catalogue designed for a Gwalior-based wholesale distributor. Digitized their inventory of Sentini Flopipes, Paras Tanks, and Johnson Sanitary ware. Features include brand showcase, product categorization (Agri/SWR pipes), and direct WhatsApp business integration.',
+        'A B2B e-commerce platform designed for a Gwalior-based wholesale distributor. Digitized their inventory of Sentini Flopipes, Paras Tanks, and Johnson Sanitary ware. Features include brand showcase, product categorization (Agri/SWR pipes), and direct WhatsApp business integration.',
       tech: ['React', 'Next.js', 'Tailwind CSS', 'Vercel'],
       icon: Briefcase,
       gradient: 'from-blue-500/20 to-emerald-500/20',
@@ -13,6 +13,7 @@ const ProjectsSection = () => {
         live: 'https://khatu-shyam-trading-co.vercel.app',
         github: '#', // Placeholder if you add it later
       },
+      note: 'Currently live link only shows their portfolio page.',
     },
     {
       title: 'File Compression Tool',
