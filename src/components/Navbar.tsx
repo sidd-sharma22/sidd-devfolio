@@ -21,64 +21,54 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? 'glass py-4' : 'py-6 bg-transparent'
-      }`}
-    >
-      <div className="container mx-auto px-6 flex items-center justify-between">
-        <a
-          href="#"
-          className="font-mono text-lg font-bold text-foreground hover:text-primary transition-colors"
-        >
-          <span className="text-primary">&lt;</span>
-          Siddharth's Portfolio
-          <span className="text-primary">/&gt;</span>
+    <nav className={`site-nav ${isScrolled ? 'site-nav--scrolled' : ''}`} aria-label="Primary navigation">
+      <div className="site-container site-nav__inner">
+        <a href="#" className="site-nav__brand">
+          <span className="site-nav__brand-mark">&lt;</span>
+          Siddharth&apos;s Portfolio
+          <span className="site-nav__brand-mark">/&gt;</span>
         </a>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="site-nav__desktop-links">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="nav-link font-medium">
+            <a key={link.href} href={link.href} className="site-nav__link">
               {link.label}
             </a>
           ))}
-          <a
-            href="/Sidd_Resume_AI.pdf" 
-            download="Sidd_Resume.pdf"
-            className="px-4 py-2 rounded-lg bg-primary/10 text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium"
-          >
+          <a href="/Sidd_Resume_AI.pdf" download="Sidd_Resume.pdf" className="button button--small">
             Resume
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-foreground p-2"
+          className="site-nav__menu-button"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-navigation"
         >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden glass mt-2 mx-4 rounded-xl p-6 animate-fade-in">
-          <div className="flex flex-col gap-4">
+        <div id="mobile-navigation" className="site-nav__mobile-menu glass-panel">
+          <div className="site-nav__mobile-links">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="nav-link font-medium text-lg py-2"
+                className="site-nav__mobile-link"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
               </a>
             ))}
             <a
-              href="/Sidd_Resume_AI.pdf" 
+              href="/Sidd_Resume_AI.pdf"
               download="Sidd_Resume.pdf"
-              className="px-4 py-3 rounded-lg bg-primary text-primary-foreground text-center font-medium mt-2"
+              className="button button--small"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Resume
             </a>
