@@ -1,7 +1,7 @@
 import { ArrowDown, Github, Linkedin, Mail, X } from 'lucide-react';
 
 const HeroSection = () => {
-  const roles = ['Full-Stack Developer', 'AI/ML Enthusiast', 'Creative Lead'];
+  const roles = ['AI/ML Engineer', 'Ex-Reseach Intern @ ABV-IIITM Gwalior', 'Leader'];
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
@@ -26,7 +26,7 @@ const HeroSection = () => {
             
             <p className="text-muted-foreground text-lg md:text-xl mb-4">
               B.Tech Computer Science Student at {' '} <br/>
-              <span className="text-foreground">Indian Institute of Information Technology, Kottayam</span>
+              <span className="text-foreground">Indian Institute of Information Technology (IIIT) Kottayam</span>
             </p>
             
             <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-8">
@@ -70,7 +70,7 @@ const HeroSection = () => {
               {[
                 { icon: Github, href: 'https://github.com/sidd-sharma22', label: 'GitHub' },
                 { icon: Linkedin, href: 'https://www.linkedin.com/in/sidd-sharma22', label: 'LinkedIn' },
-                { icon: X, href: 'https://x.com/sidd_sharma22', label: 'X' },
+                { icon: X, href: 'https://x.com/sidd_sharma19', label: 'X' },
                 { icon: Mail, href: 'mailto:siddharthsharma2219@gmail.com', label: 'Email' },
               ].map(({ icon: Icon, href, label }) => (
                 <a
@@ -111,7 +111,7 @@ const HeroSection = () => {
               </div>
               
               <div className="absolute -bottom-2 -left-4 px-4 py-2 glass rounded-full text-sm font-mono animate-float animation-delay-200">
-                CGPA: <span className="text-primary">7.68</span>
+                CGPA: <span className="text-primary">7.69</span>
               </div>
             </div>
           </div>
